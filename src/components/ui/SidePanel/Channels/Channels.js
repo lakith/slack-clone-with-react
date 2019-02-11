@@ -132,7 +132,7 @@ class Channels extends Component {
 
         return (
             <React.Fragment>
-                <Menu.Menu style={{paddingBottom:'2em'}}>
+                <Menu.Menu style={{paddingBottom:'2em'}} >
                     <Menu.Item>
                         <span>
                             <Icon name="exchange"/> CHANNELS

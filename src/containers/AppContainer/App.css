@@ -5,3 +5,31 @@ body,
   background: #eeeeee;
   padding:1em;
 }
+
+.messages {
+  height: 410px;
+  overflow-y:scroll;
+}
+
+.message__form {
+    position:fixed !important;
+    bottom: 0.1em;
+    margin-left: 333px !important;
+    margin-top: 20px ;
+    left: 0;
+    right: 1em;
+    z-index: 200;
+}
+
+.message__self {
+  border-left: 2px solid orange;
+  padding-left: 8px;
+}
+
+.message__image{
+  padding: 1em;
+}
+
+.progress__bar {
+  margin: 0.3em
+}

@@ -12,17 +12,14 @@ import MetaPanel from '../../components/ui/MetaPanel/MetaPanel'
 class Home extends Component {
     render () {
         return (
-            <div>
-                
-                
-                
+            <div> 
                 <Grid columns="equal" className="app" style={{background:'#eee'}}>
                     <ControlPanel />
 
                     <SidePanel />
 
                     <Grid.Column style={{marginLeft:320}} >
-                        <Messages />
+                        <Messages {...this.props} key={"Messages unique key - 123SL2323"} />
                     </Grid.Column>
 
                     <Grid.Column width={4} >
@@ -35,9 +32,13 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = state => {
+let mapStateToProps = state => {
     return {
-        isAuthenticated : state.auth.userId !== null        
+        isAuthenticated : state.auth.userId !== null,
+        userId:state.auth.userId,
+        displayName : state.auth.displayName,
+        photoURL : state.auth.photoUrl,
+        currentChannel : state.channelData.channel
     }
 };
 
